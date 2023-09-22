@@ -12,7 +12,7 @@ public class Homepage extends Base {
 		
 		Homepage obj = new Homepage();
 		obj.openbrowser("chrome");
-		login();
+		login("admin","admin@123");
 		obj.Homepagetest();
 		obj.logout();
 

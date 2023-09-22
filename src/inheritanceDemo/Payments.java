@@ -12,7 +12,7 @@ public class Payments extends Homepage {
 		
 		Payments obj = new Payments();
 		obj.openbrowser("chrome");
-		obj.login();
+		obj.login("admin","admin@123");
 		obj.Homepagetest();
 		obj.payments();
 		obj.logout();
