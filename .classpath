@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+<<<<<<< HEAD
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="lib" path="/home/bolluharithamph/Downloads/work/selenium-api-4.13.0.jar"/>
@@ -82,5 +83,13 @@
 	<classpathentry kind="lib" path="/home/bolluharithamph/Downloads/work/lib/opentelemetry-semconv-1.28.0-alpha.jar"/>
 	<classpathentry kind="lib" path="/home/bolluharithamph/Downloads/work/lib/reactive-streams-1.0.4.jar"/>
 	<classpathentry kind="lib" path="/home/bolluharithamph/Downloads/work/lib/slf4j-api-2.0.7.jar"/>
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+<<<<<<< HEAD
+	<classpathentry kind="lib" path="/home/bolluharithamph/Downloads/mysql-connector-j-8.1.0/mysql-connector-j-8.1.0.jar"/>
+=======
+>>>>>>> 361fa19eec36faf4ddf76677f596e61eec793b31
+>>>>>>> 02d3454c2cb8da1d53e61bb46fd9ff0439b836ee
 	<classpathentry kind="output" path="bin"/>
 </classpath>

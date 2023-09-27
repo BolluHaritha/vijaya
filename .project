@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>SeleniumDemo</name>
+=======
+<<<<<<< HEAD
+	<name>JDBC-programs</name>
+=======
+	<name>java-project-phase1</name>
+>>>>>>> 361fa19eec36faf4ddf76677f596e61eec793b31
+>>>>>>> 02d3454c2cb8da1d53e61bb46fd9ff0439b836ee
 	<comment></comment>
 	<projects>
 	</projects>
