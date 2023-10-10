@@ -1,9 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+<<<<<<< HEAD
   <groupId>testNGphase2</groupId>
   <artifactId>testNGPhase2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+=======
+  <groupId>selenium-Basics</groupId>
+  <artifactId>selenium-Basics</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+>>>>>>> bd2784fe4151c765c1d3865e6cb7f653dd8527bc
   <dependencies>
   
   <dependency>
@@ -19,6 +27,7 @@
     <version>4.4.3</version>
 </dependency>
 
+<<<<<<< HEAD
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
@@ -54,6 +63,8 @@
 </dependency>
 
 
+=======
+>>>>>>> bd2784fe4151c765c1d3865e6cb7f653dd8527bc
   
   </dependencies>
 </project>
