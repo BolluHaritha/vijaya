@@ -1,9 +1,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+<<<<<<< HEAD
   <groupId>NinjaDemo-POMFramework</groupId>
   <artifactId>NinjaDemo-POMFramework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+=======
+<<<<<<< HEAD
+  <groupId>testNGphase2</groupId>
+  <artifactId>testNGPhase2</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+=======
+  <groupId>selenium-Basics</groupId>
+  <artifactId>selenium-Basics</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+>>>>>>> bd2784fe4151c765c1d3865e6cb7f653dd8527bc
+>>>>>>> c2c7479bca0d78d2a056ac5a366551bf225374db
   <dependencies>
   
   <dependency>
@@ -19,6 +34,10 @@
     <version>4.4.3</version>
 </dependency>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c2c7479bca0d78d2a056ac5a366551bf225374db
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
@@ -52,6 +71,7 @@
     <artifactId>poi-ooxml-schemas</artifactId>
     <version>4.1.1</version>
 </dependency>
+<<<<<<< HEAD
 </dependencies>
 
 <build>
@@ -106,4 +126,12 @@
       </plugins>
     </pluginManagement>
   </build>
+=======
+
+
+=======
+>>>>>>> bd2784fe4151c765c1d3865e6cb7f653dd8527bc
+  
+  </dependencies>
+>>>>>>> c2c7479bca0d78d2a056ac5a366551bf225374db
 </project>

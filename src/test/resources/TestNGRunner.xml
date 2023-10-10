@@ -1,6 +1,7 @@
 
 
 <suite name="test1" verbose="1">
+<<<<<<< HEAD
 
   <listeners>
     <listener class-name="com.ninja.qa.TestPages.ItestListenerClass"></listener>
@@ -9,6 +10,13 @@
 <classes>
 <class name="com.ninja.qa.TestPages.TestRegisterPage"></class>
 <class name="com.ninja.qa.TestPages.TestProductPage"></class>
+=======
+<test name="TestCycle1">
+<classes>
+<class name="com.app.TestNGScripts.TestAnnotation"></class>
+<class name="com.app.TestNGScripts.BeforeAfterMethodAnnotation"></class>
+<class name="com.app.TestNGScripts.BeforeAfterClassAnnotion"></class>
+>>>>>>> c2c7479bca0d78d2a056ac5a366551bf225374db
 </classes>
 </test>
 </suite>
