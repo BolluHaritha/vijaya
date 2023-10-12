@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>Lesson3-EndProject</name>
+=======
+<<<<<<< HEAD
+	<name>Lesson3-TDDFramework</name>
+=======
+<<<<<<< HEAD
+	<name>NinjaDemo-POMFramework</name>
+=======
+<<<<<<< HEAD
+	<name>testNGPhase2</name>
+=======
+<<<<<<< HEAD
+	<name>SeleniumDemo</name>
+=======
+<<<<<<< HEAD
+	<name>SeleniumPhase1</name>
+=======
+<<<<<<< HEAD
+	<name>seleniumDemo</name>
+=======
+<<<<<<< HEAD
+	<name>selenium-Basics</name>
+=======
+<<<<<<< HEAD
+	<name>SeleniumDemo</name>
+=======
+<<<<<<< HEAD
+	<name>JDBC-programs</name>
+=======
+	<name>java-project-phase1</name>
+>>>>>>> 361fa19eec36faf4ddf76677f596e61eec793b31
+>>>>>>> 02d3454c2cb8da1d53e61bb46fd9ff0439b836ee
+>>>>>>> 33efcdfcf0fad95c740602db8b2e4eb73785ef40
+>>>>>>> 707e288d4a3be6e5a2bb71f81cbab60c0f30e8ad
+>>>>>>> 9666b9c3109674f1080a825c69f9172ae3d6ac4b
+>>>>>>> cd8c2e44ad1a290d029d59cfc8148992f18cc206
+>>>>>>> bd2784fe4151c765c1d3865e6cb7f653dd8527bc
+>>>>>>> c2c7479bca0d78d2a056ac5a366551bf225374db
+>>>>>>> 035919e8112a84166c9ffece63b9805926fd22b0
+>>>>>>> 7111f7716c0e68644eb5fcd63920b63342844080
 	<comment></comment>
 	<projects>
 	</projects>
@@ -10,6 +50,34 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+=======
+<<<<<<< HEAD
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+=======
+<<<<<<< HEAD
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+=======
+<<<<<<< HEAD
+>>>>>>> bd2784fe4151c765c1d3865e6cb7f653dd8527bc
+>>>>>>> c2c7479bca0d78d2a056ac5a366551bf225374db
+>>>>>>> 035919e8112a84166c9ffece63b9805926fd22b0
+>>>>>>> 7111f7716c0e68644eb5fcd63920b63342844080
 		<buildCommand>
 			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>
@@ -19,5 +87,25 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+>>>>>>> 33efcdfcf0fad95c740602db8b2e4eb73785ef40
+>>>>>>> 707e288d4a3be6e5a2bb71f81cbab60c0f30e8ad
+>>>>>>> 9666b9c3109674f1080a825c69f9172ae3d6ac4b
+>>>>>>> cd8c2e44ad1a290d029d59cfc8148992f18cc206
+>>>>>>> bd2784fe4151c765c1d3865e6cb7f653dd8527bc
+>>>>>>> c2c7479bca0d78d2a056ac5a366551bf225374db
+>>>>>>> 035919e8112a84166c9ffece63b9805926fd22b0
+>>>>>>> 7111f7716c0e68644eb5fcd63920b63342844080
 	</natures>
 </projectDescription>
