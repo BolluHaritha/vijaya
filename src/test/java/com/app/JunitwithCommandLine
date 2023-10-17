@@ -1,0 +1,33 @@
+Microsoft Windows [Version 10.0.19045.3570]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Haritha>cd C:\BolluHaritha\Phase2-ATE-JUnit\src\test\java\com\app\JUnitDemo
+
+C:\BolluHaritha\Phase2-ATE-JUnit\src\test\java\com\app\JUnitDemo>javac -cp C:/Users/Haritha/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3-sources.jar;. TestAnnotation.java
+C:\Users\Haritha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3-sources.jar(/org/junit/jupiter/api/Test.java):13: error: package org.apiguardian.api.API does not exist
+import static org.apiguardian.api.API.Status.STABLE;
+                                     ^
+C:\Users\Haritha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3-sources.jar(/org/junit/jupiter/api/Test.java):13: error: static import only from classes and interfaces
+import static org.apiguardian.api.API.Status.STABLE;
+^
+C:\Users\Haritha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3-sources.jar(/org/junit/jupiter/api/Test.java):21: error: package org.apiguardian.api does not exist
+import org.apiguardian.api.API;
+                          ^
+C:\Users\Haritha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3-sources.jar(/org/junit/jupiter/api/Test.java):22: error: package org.junit.platform.commons.annotation does not exist
+import org.junit.platform.commons.annotation.Testable;
+                                            ^
+C:\Users\Haritha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3-sources.jar(/org/junit/jupiter/api/Test.java):76: error: cannot find symbol
+@API(status = STABLE, since = "5.0")
+ ^
+  symbol: class API
+C:\Users\Haritha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3-sources.jar(/org/junit/jupiter/api/Test.java):77: error: cannot find symbol
+@Testable
+ ^
+  symbol: class Testable
+C:\Users\Haritha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3-sources.jar(/org/junit/jupiter/api/Test.java):76: error: cannot find symbol
+@API(status = STABLE, since = "5.0")
+              ^
+  symbol: variable STABLE
+7 errors
+
+C:\BolluHaritha\Phase2-ATE-JUnit\src\test\java\com\app\JUnitDemo>
