@@ -1,0 +1,12 @@
+package ATE.Phase2.GradleProject;
+
+import org.junit.Test;
+
+public class DemoTest {
+	@Test
+	public void gradledemo()
+	{
+		System.out.println("gradle test demo");
+	}
+
+}
