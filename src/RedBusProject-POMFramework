@@ -1,0 +1,389 @@
+BASECLASS:
+
+
+package com.app.ninja.qa.Base;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Method;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+public class BaseTest {
+	
+	public static WebDriver driver;
+	public static ExtentReports extentreports;
+	public static ExtentTest extentTest;
+	public static void openBrowser()
+	{
+	    driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.redbus.com/");	
+	}
+	@BeforeTest
+	public void getnameMethod(ITestContext context)
+	{
+		extentTest=	extentreports.createTest(context.getName());
+	}
+	@BeforeSuite  
+	public void InitalizeExtentReport()
+	{
+		ExtentSparkReporter sparkreporter = new ExtentSparkReporter("reportpom.html");
+		extentreports = new ExtentReports();
+		extentreports.attachReporter(sparkreporter);
+		extentreports.setSystemInfo("OS", System.getProperty("os.name"));
+		extentreports.setSystemInfo("JAVA", System.getProperty("java.version"));
+	}
+ 
+	@AfterSuite
+	public void generateReports() throws IOException
+	{
+		extentreports.flush();
+		Desktop.getDesktop().browse(new File("reportpom.html").toURI());
+	}
+	
+	@AfterMethod
+	public void generateTestStatus(Method m,ITestResult result)
+	{
+		if(result.getStatus() == ITestResult.FAILURE )
+		{
+			System.out.println("Capture Screenshot");
+			extentTest.fail(result.getThrowable());
+		}
+		else if (result.getStatus() == ITestResult.SUCCESS) {
+			extentTest.pass(m.getName() + " is passed");
+		}
+	}
+}
+
+HOMEPAGE:
+
+package com.app.ninja.qa.pages;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import com.app.ninja.qa.Base.BaseTest;
+public class Homepage extends BaseTest {
+	Actions a = new Actions(driver);
+	@FindBy(xpath = "//span[text()='login']")
+	WebElement login;
+	@FindBy(xpath = "//a[text()='SignIn']")
+	WebElement SignIn;
+	@FindBy(xpath="//div[text()='ManageBooking']")
+	WebElement ManageBooking;
+	public Homepage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+    public void gettitle()
+	{
+		String title = driver.getTitle();
+		System.out.println(title);
+		
+	}
+    public void clickonMyAccount()
+	{
+		login.click();
+	}
+	
+	public void clickonLogin()
+	{
+		login.click();
+	}
+	
+	public void clickonRegister()
+	{
+	SignIn.click();
+	}
+	
+	public void clickOnMac() throws InterruptedException
+	{
+	    a.moveToElement(ManageBooking).build().perform();
+	    
+	    Thread.sleep(1500);
+	    
+	    ManageBooking.click();
+	}
+
+
+    
+
+}
+
+TESTHOMEPAGE:
+
+package com.app.ninja.qa.TestPages;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.app.ninja.qa.Base.BaseTest;
+import com.app.ninja.qa.pages.Homepage;
+
+public class TestHomepage extends BaseTest {
+	
+Homepage hp;
+	
+	@BeforeMethod
+	public void OpenApp()
+	{
+		openBrowser();
+		hp = new Homepage(driver);
+	}
+	
+	
+	@AfterMethod
+	public void CloseApp()
+	{
+		driver.quit();
+	}
+	
+	@Test(priority='1')
+	public void testTitle()
+	{
+		hp.gettitle();
+	}
+	
+
+	@Test(priority='2')
+	public void testLogin()
+	{
+		hp.clickonLogin();  
+		hp.clickonRegister();  
+		hp.gettitle();  
+	}
+
+	@Test(priority='3')
+	public void testRegister()
+	{
+		hp.clickonLogin();  // on homapge click on myaccount
+		hp.clickonRegister(); // clcik on login
+		hp.gettitle();  
+	}
+	
+	}
+
+ITESTLISTENERCLASS:
+
+package com.app.ninja.qa.TestPages;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+public class ITestListenerClass {
+public void onTestStart(ITestResult result) {
+		System.out.println("Test method has been started");
+	}
+    public void onTestSuccess(ITestResult result) {
+		System.out.println("Test method is success");
+	}
+    public void onTestFailure(ITestResult result) {
+		System.out.println("Test method is failure");
+		System.out.println("screenshot code");
+	}
+    public void onTestSkipped(ITestResult result) {
+		System.out.println("Test method is sipped");
+	}
+    public void onTestFailedWithTimeout(ITestResult result) {
+		System.out.println("Test method is failure due to timeout");
+	}
+
+	public void onStart(ITestContext context) {
+
+		
+		System.out.println("Testing has started");
+	}
+
+	public void onFinish(ITestContext context) {
+		
+		System.out.println("Testing has ended");
+	}
+
+
+
+}
+
+
+TESTRUNNER.XML FILE:
+
+
+
+<suite name="test1" verbose="1">
+
+  <listeners>
+    <listener class-name="com.ninja.qa.TestPages.ItestListenerClass"></listener>
+  </listeners>
+<test name="POMframework">
+<classes>
+<class name="com.ninja.qa.TestPages.TestHomepage"></class>
+</classes>
+</test>
+</suite>
+
+XLS_DATAPROVIDER:
+
+package com.app.ninja.qa.Utilities;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+public class XLS_DataProvider {
+	
+	static Workbook book;
+	static Sheet sheet;
+
+	public static String testdata_sheet_path = "C:\\Users\\Haritha\\Desktop\\MyExcels\\TestData1.xlsx";
+
+	public static Object[][] getTestData(String sheetName ) throws EncryptedDocumentException, IOException
+	{
+		
+		FileInputStream file = null;
+		file =	new FileInputStream(testdata_sheet_path);
+		
+		book = WorkbookFactory.create(file);
+		
+		sheet = book.getSheet(sheetName);
+		
+		//create an array which will store number of rows and cols
+		// dataType[][] arrayname = new datatype[lengthrow][lengthcol]
+		
+		Object[][] inputdata = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
+		
+		for(int i=0;i<sheet.getLastRowNum();i++)
+		{
+			for(int j=0;j<sheet.getRow(0).getLastCellNum();j++)
+			{
+				inputdata[i][j] = sheet.getRow(i+1).getCell(j).toString();
+			}
+		}
+		
+		return inputdata;
+		
+	}
+
+}
+
+
+POMFILE:
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>RedBusNinjaDemo-POMFramework</groupId>
+  <artifactId>RedBusNinjaDemo-POMFramework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  
+  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.12.1</version>
+</dependency>
+
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.4.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.7.1</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>4.1.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>4.1.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml-schemas</artifactId>
+    <version>4.1.1</version>
+</dependency>
+</dependencies>
+
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+          <configuration>
+    <suiteXmlFiles>
+        <!--     <suiteXmlFile>src/main/resources/TestRunner3.xml</suiteXmlFile> -->
+        <suiteXmlFile>src/test/resources/TestNgRunner.xml</suiteXmlFile>
+       
+          </suiteXmlFiles>
+</configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
