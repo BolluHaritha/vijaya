@@ -1,0 +1,16 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1698811668629,562,Login,200,OK,Thread Group 1-1,text,true,,4757,116,3,3,https://blazedemo.com/,557,0,197
+1698811668828,1024,Login,200,OK,Thread Group 1-2,text,true,,4757,116,5,5,https://blazedemo.com/,1010,0,96
+1698811669195,903,Homepage,200,OK,Thread Group 1-1,text,true,,4757,116,5,5,https://blazedemo.com/,888,0,0
+1698811669028,1124,Login,200,OK,Thread Group 1-3,text,true,,4757,116,5,5,https://blazedemo.com/,1115,0,106
+1698811669228,1036,Login,200,OK,Thread Group 1-4,text,true,,4757,116,5,5,https://blazedemo.com/,1035,0,80
+1698811670154,375,Homepage,200,OK,Thread Group 1-3,text,true,,4757,116,5,5,https://blazedemo.com/,372,0,0
+1698811670269,388,Homepage,200,OK,Thread Group 1-4,text,true,,4757,116,5,5,https://blazedemo.com/,384,0,0
+1698811669853,885,Homepage,200,OK,Thread Group 1-2,text,true,,4757,116,5,5,https://blazedemo.com/,885,0,0
+1698811669434,1346,Login,200,OK,Thread Group 1-5,text,true,,4757,116,5,5,https://blazedemo.com/,1343,0,81
+1698811670659,374,Logout,200,OK,Thread Group 1-4,text,true,,4757,116,5,5,https://blazedemo.com/,365,0,0
+1698811670105,1025,Logout,200,OK,Thread Group 1-1,text,true,,4757,116,4,4,https://blazedemo.com/,1023,0,0
+1698811670532,741,Logout,200,OK,Thread Group 1-3,text,true,,4757,116,3,3,https://blazedemo.com/,739,0,0
+1698811670784,1059,Homepage,200,OK,Thread Group 1-5,text,true,,4757,116,2,2,https://blazedemo.com/,1050,0,0
+1698811671845,434,Logout,200,OK,Thread Group 1-5,text,true,,4757,116,2,2,https://blazedemo.com/,434,0,0
+1698811670740,8856,Logout,200,OK,Thread Group 1-2,text,true,,4757,116,1,1,https://blazedemo.com/,8851,0,0

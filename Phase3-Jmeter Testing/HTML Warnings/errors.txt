@@ -1,0 +1,87 @@
+line 3 column 21 - Warning: <script> lacks "type" attribute
+line 8 column 1 - Warning: <html> isn't allowed in <head> elements
+line 9 column 5 - Warning: <head> isn't allowed in <body> elements
+line 10 column 5 - Warning: meta lacks "content" attribute
+line 10 column 5 - Warning: meta isn't allowed in <body> elements
+line 11 column 5 - Warning: meta isn't allowed in <body> elements
+line 12 column 5 - Warning: meta isn't allowed in <body> elements
+line 13 column 5 - Warning: <title> isn't allowed in <body> elements
+line 13 column 47 - Warning: link isn't allowed in <body> elements
+line 14 column 5 - Warning: link isn't allowed in <body> elements
+line 15 column 5 - Warning: link isn't allowed in <body> elements
+line 16 column 55 - Warning: <base> isn't allowed in <body> elements
+line 17 column 5 - Warning: <base> element not empty or not closed
+line 18 column 5 - Warning: <script> lacks "type" attribute
+line 24 column -3 - Warning: </head> isn't allowed in <body> elements
+line 28 column 9 - Error: <app-root> is not recognized!
+line 28 column 9 - Warning: discarding unexpected <app-root>
+line 28 column 15 - Warning: discarding unexpected </app-root>
+line 287 column 1 - Warning: ID "<script>" uses XML ID syntax
+line 671 column 1 - Warning: <script> lacks "type" attribute
+line 720 column 1 - Warning: unknown attribute "async"
+line 720 column 1 - Warning: <script> lacks "type" attribute
+line 795 column 1 - Warning: link lacks "type" attribute
+line 795 column 1 - Warning: link isn't allowed in <body> elements
+line 796 column 1 - Warning: unknown attribute "as"
+line 796 column 1 - Warning: link isn't allowed in <body> elements
+line 797 column 1 - Warning: <link> isn't allowed in <body> elements
+line 798 column 1 - Warning: <link> element not empty or not closed
+line 1,440 column 1 - Warning: unknown attribute "data-backdrop"
+line 1,440 column 1 - Warning: unknown attribute "data-keyboard"
+line 1,440 column 1 - Warning: unknown attribute "aria-hidden"
+line 1,440 column 1 - Warning: unknown attribute "aria-labelledby"
+line 1,440 column 1 - Warning: unknown attribute "role"
+line 1,440 column 1 - Warning: <div> attribute "tabindex" has invalid value "-1"
+line 1,441 column 9 - Warning: unknown attribute "role"
+line 1,443 column 25 - Warning: unknown attribute "role"
+line 1,443 column 25 - Warning: unknown attribute "aria-label"
+line 1,453 column 21 - Warning: trimming empty <div>
+line 1,459 column 41 - Warning: <img> lacks "alt" attribute
+line 1,459 column 129 - Warning: <img> element not empty or not closed
+line 1,460 column 41 - Warning: <br> element not empty or not closed
+line 1,471 column 25 - Warning: unknown attribute "aria-label"
+line 1,473 column 23 - Warning: <img> element not empty or not closed
+line 1,474 column 26 - Warning: unknown attribute "aria-label"
+line 1,476 column 23 - Warning: <img> element not empty or not closed
+line 1,483 column 38 - Warning: trimming empty <h3>
+line 1,488 column 17 - Warning: unknown attribute "aria-label"
+line 1,492 column 67 - Warning: Warning: unescaped & which should be written as &amp;
+line 1,492 column 93 - Warning: Warning: unescaped & which should be written as &amp;
+line 1,492 column 93 - Warning: unknown attribute "aria-label"
+line 1,492 column 107 - Warning: Warning: unescaped & which should be written as &amp;
+line 1,497 column 17 - Warning: <img> element not empty or not closed
+line 1,504 column 9 - Warning: unknown attribute "aria-label"
+line 1,504 column 9 - Warning: unknown attribute "data-dismiss"
+line 1,507 column 1 - Warning: <input> isn't allowed in <body> elements
+line 1,507 column 1 - Warning: inserting implicit <form>
+line 1,508 column 1 - Warning: <input> element not empty or not closed
+line 1,510 column 1 - Warning: <input> element not empty or not closed
+line 1,510 column 1 - Warning: missing </form> before <div>
+line 1,512 column 11 - Error: <header> is not recognized!
+line 1,512 column 11 - Warning: discarding unexpected <header>
+line 1,513 column 13 - Warning: unknown attribute "aria-atomic"
+line 1,513 column 13 - Warning: unknown attribute "role"
+line 1,513 column 13 - Warning: unknown attribute "aria-live"
+line 1,513 column 13 - Warning: unknown attribute "inert"
+line 1,515 column 11 - Warning: discarding unexpected </header>
+line 1,517 column 13 - Warning: <img> lacks "alt" attribute
+line 1,518 column 13 - Warning: <img> element not empty or not closed
+line 1,519 column 18 - Warning: missing </span> before <p>
+line 1,520 column 17 - Warning: <br> element not empty or not closed
+line 1,523 column 18 - Warning: missing </span> before <div>
+line 1,523 column 18 - Warning: trimming empty <span>
+line 1,527 column 29 - Warning: <img> element not empty or not closed
+line 1,546 column 29 - Warning: <img> element not empty or not closed
+InputStream: Doctype given is ""
+InputStream: Document content looks like XHTML 1.0 Strict
+72 warnings, 4 errors were found!
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+The alt attribute should be used to give a short description
+of an image; longer descriptions should be given with the
+longdesc attribute which takes a URL linked to the description.
+These measures are needed for people using non-graphical browsers.
+For further advice on how to make your pages accessible
+see "http://www.w3.org/WAI/GL". You may also want to try
+"http://www.cast.org/bobby/" which is a free Web-based
+service for checking URLs for accessibility.
